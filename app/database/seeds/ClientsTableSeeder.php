@@ -8,11 +8,16 @@ class ClientsTableSeeder extends Seeder {
 		// DB::table('clients')->truncate();
 
 		$clients = array(
+			'name'    =>'mike bosire',
+			'idno'    =>'26578907',
+			'mobile'  => '0710889736',
+			'email'   =>'abosire@fortis-it.co.ke',
+			'address' => 'P.O Box 14325-00100, Nbi'
 
 		);
 
 		// Uncomment the below to run the seeder
-		// DB::table('clients')->insert($clients);
+		 DB::table('clients')->insert($clients);
 	}
 
 }

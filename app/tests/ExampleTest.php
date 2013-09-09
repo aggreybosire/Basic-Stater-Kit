@@ -16,7 +16,8 @@ class ExampleTest extends TestCase {
   //       Assert::true(true);
 		$crawler = $this->client->request('GET', '/');
 
-		$this->assertTrue($this->client->getResponse()->isOk());
+		
+		$this->assertRequestOk();
 	}
 
 }

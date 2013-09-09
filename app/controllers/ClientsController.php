@@ -1,6 +1,13 @@
 <?php
 
 class ClientsController extends BaseController {
+    
+    $protected = $client;
+
+
+    function __construct(Client $client) {
+    	$this->client = $client;
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +16,8 @@ class ClientsController extends BaseController {
 	 */
 	public function index()
 	{
-		//
+		$clients = $this->client->all();
+		return View::make('clients.index',compact('clients'));
 	}
 
 	/**

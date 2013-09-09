@@ -12,10 +12,21 @@ class ClientsControllerTest extends TestCase {
 	 */
 	public function testAll()
 	{
-		
-		$response = $this->call('GET', 'clients');
+		//Client::shouldReceive('all')->once->andReturn('foo');
+		$this->call('GET', 'clients');
 
-		$this->assertTrue($response->isOk());
+		$this->assertResponseOk();
+		$this->assertViewReceives('clients');
 	}
+	
+
+  //   public function testStore()
+  //   {
+  //   	Client::shouldReceive('store')->once->andReturn('truthy');
+		// $this->call('POST', 'clients');
+
+		// $this->assertRedirectedTo('clients');
+  //   }
 
 }
+

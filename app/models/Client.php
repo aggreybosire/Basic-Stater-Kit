@@ -1,6 +1,6 @@
 <?php
 
-class Client extends Eloquent {
+class Client extends BaseModel {
 	protected $guarded = array();
 
 	public static $rules = array();
