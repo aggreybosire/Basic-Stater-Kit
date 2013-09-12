@@ -1,12 +1,17 @@
 <?php
 
+use booking\repositories\ClientRepositoryInterface;
+
 class ClientsController extends BaseController {
     
-    $protected = $client;
+    protected $client;
 
 
-    function __construct(Client $client) {
+    public function __construct(ClientRepositoryInterface $client) 
+    {
+    	
     	$this->client = $client;
+
     }
 
 	/**
@@ -16,8 +21,11 @@ class ClientsController extends BaseController {
 	 */
 	public function index()
 	{
+		
 		$clients = $this->client->all();
-		return View::make('clients.index',compact('clients'));
+		
+		return View::make('themes.default.clients.index',compact('clients'));
+	
 	}
 
 	/**

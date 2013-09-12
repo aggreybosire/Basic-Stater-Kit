@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'booking' => array($baseDir . '/app'),
     'Whoops' => array($vendorDir . '/filp/whoops/src'),
     'Way\\Tests' => array($vendorDir . '/way/laravel-test-helpers/src'),
     'Way\\Generators' => array($vendorDir . '/way/generators/src'),

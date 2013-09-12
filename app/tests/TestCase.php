@@ -1,18 +1,29 @@
 <?php
 
-use \Mockery as m;
+
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
+
+    
 	/**
 	 * static call to clean up the Mockery container used by the current test, 
 	 * and run any verification tasks needed for your expectations
 	 */
 
+    public function setUp()
+    {
+     
+       parent::setUp();
+ 
+    }
+
+
     public function tearDown()
     {
-        m::close();
+        Mockery::close();
     }
+
 
 
 	/**
